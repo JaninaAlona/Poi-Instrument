@@ -1,58 +1,10 @@
-#include "wifi_pw.h"
-#include <WiFiNINA.h>
 #include <Arduino_LSM6DS3>
-
-char ssid[] = SECRET_SSID;                
-char pass[] = SECRET_PASS;  
-
-int status = WL_IDLE_STATUS;
-
-WiFiSSLClient client;
-
-void connectToAP() {
-  // Connect to Wifi Access Point
-  
-  while ( status != WL_CONNECTED) {
-    Serial.print("Attempting to connect to SSID: ");
-    Serial.println(ssid);
-    
-    // Connect to WPA/WPA2 network
-    status = WiFi.begin(ssid, pass);
- 
-    // wait 1 second for connection:
-    delay(1000);
-    Serial.println("Connected...");
-  }
-}
- 
-void printWifiStatus() {
-  // Print results to serial monitor  
- 
- // Network SSID  
-  Serial.print("SSID: ");
-  Serial.println(WiFi.SSID());
-  
-  // Device IP address
-  IPAddress ip = WiFi.localIP(); 
-  Serial.print("IP Address: ");
-  Serial.println(ip);
-}
 
 
 void setup() {
   Serial.begin(9600);
   while (!Serial);
  
-  // Check for the WiFi module:
-  if (WiFi.status() == WL_NO_MODULE) {
-    Serial.println("WiFi module failed!");
-    while (true);
-  }
-   
-  connectToAP();  
-    
-  printWifiStatus();
-
   if (!IMU.begin()) {
     Serial.println("Failed to initialize IMU!");
  
