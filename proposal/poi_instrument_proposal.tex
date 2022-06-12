@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{tgbonum}
+
+\pagenumbering{arabic}
+\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+
+\setlength{\headheight}{30pt}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+
+\title{SynthPOIsizer \\ Poi Instrument}
+\date{6/12/2022}
+\author{Janina Schroeder, version 1}
+
+
+\rfoot{\thepage/\pageref{LastPage}}
+\begin{document}
+	
+	
+	\clearpage\maketitle
+	\thispagestyle{empty}
+	
+	\newpage
+	\tableofcontents
+	
+	\input{01_formal_information}
+	\input{02_introduction}
+	\input{03_description}
+	\input{04_mcu_program_requirements}
+	\input{05_vst_plugin_requirements}
+	\input{06_project_schedule}
+	\input{07_resources}
+\end{document}

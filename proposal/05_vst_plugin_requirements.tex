@@ -1,0 +1,47 @@
+\newpage
+\section{VST Plug-in Requirements}
+
+\subsection{VST Plug-in Functions}
+\begin{description}
+	\item The VST plug-in must realize the following functions:
+\end{description}
+\begin{itemize}
+	\item Receiveing of UDP packets and interpreting of sensor data
+	\item Mapping functionality of individual or a combination of sensor values to non-binary synthesizer parameters (individual mapping for each poi)
+	\item Calculation of speed, acceleration, velocity and orientation of pois based on sensor data
+	\item Interpretation of calculations to reasonable sound paramaters, the sensor values need to be converted to reasonable sound parameter values
+	\item User Interface with visual feedback of sound parameters being modified by the pois
+	\item Connection possibility with pois by providing wifi password of user's wifi
+	\item Sound Synthesis functionality
+	\item Manual sound parameter Modification without use of poi instrument (like normal VST plug-in)
+	\item Recording functionality, Bluetooth pairing functionality
+	\item Conversion of sound parameters to Midi messages (interface functionality to DAW)
+\end{itemize}
+\newpage
+\subsection{VST Plug-in mappable Synthesizer Functions}
+\begin{description}
+	\item The functions of the synthesizer are mostly optional and are only limited by time. At least the oscillator 1 and 2 frequency and volume should be implemented for demonstration purposes of the instrument. The list can be continued. \\ 
+	Poi-mappable synthesizer parameters:
+\end{description}
+\begin{itemize}
+	\item Oscillator 1: Frequency, Phase, Volume
+	\item Oscillator 2: Frequency, Phase, Volume
+	\item Filter 1: Frequency, Drive
+	\item Filter 2: Frequency, Drive
+	\item LFO 1: Depth, Resonance
+	\item LFO 2: Depth, Resonance
+	\item Effects like: Chorus, Reverb, Delay, Flanger, Phaser or Distortion
+\end{itemize}	
+
+\subsection{VST Plug-in non-mappable Synthesizer Functions}
+\begin{description}
+	\item The synthesizer should be at least able to generate sound without the use of the pois. \\
+	Optional additional non-mappable synthesizer parameters:
+\end{description}
+\begin{itemize}
+	\item Oscillator 1: SubOsc on/off, waveform (Saw, Triangle, Sine, Square), Unison
+	\item Oscillator 2: SubOsc on/off, waveform (Saw, Triangle, Sine, Square), Unison
+	\item Filter 1: Filterform (HPF, BPF, LPF)
+	\item Filter 2: Filterform (HPF, BPF, LPF)
+	\item Load wavetables
+\end{itemize}

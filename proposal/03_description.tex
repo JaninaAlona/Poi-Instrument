@@ -1,0 +1,28 @@
+\newpage
+\section{Description}
+The poi instrument uses sensor data of an accelerometer and gyroscope in each poi as control input for sound parameters of a software synthesizer in form of a VST plugin written in C++. The sensor data should be sent via wifi and UDP protocol.
+
+\subsection{Hardware Technology}
+\begin{description}
+\item Each of the 2 pois should have the following hardware built-in:
+\end{description}
+\begin{itemize}
+	\item Arduino Nano 33 IoT Microcontroller
+	\item u-blox NINA-W102 radio module for wifi transmission on Arduino IoT 
+	\item IMU LSM6DS3 3D accelerometer, 3D gyroscope module for movement data on Arduino IoT
+	\item rechargable battery
+	\item LEDs for night visibility, possibility to turn the ligths on/off
+	\item power button to turn on/off sending of sensor data
+\end{itemize}
+
+\subsection{Software Technology}
+\begin{description}
+	\item The software stack consists of the following libraries:
+\end{description}
+\begin{itemize}
+	\item capPlusPlus C++ library for packet capturing and parsing UDP packets  
+	\item Juce C++ Framework for VST plugin with software synthesizer
+	\item WiFiNINA Arduino library for radio module
+	\item VST plugin should support Windows, MacOS and Linux platforms
+	\item VST plugin should be installable and used by common DAWs like Ableton Live, Cubase, Logic Pro, etc.
+\end{itemize}
